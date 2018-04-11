@@ -15,9 +15,6 @@ export class Client {
       options.headers = options.headers || {};
       options.headers["x-access-token"] = this.accessToken;
 
-      console.log(options);
-
-
       request(`${this.baseURL}${path}`, options, (err, response, body) => {
         if (err)
           return rej(err);
