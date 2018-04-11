@@ -1,0 +1,23 @@
+{
+  "name": "restpack-node",
+  "version": "1.0.0",
+  "description": "Restpack.IO API Client",
+  "main": "index.js",
+  "repository": "https://github.com/restpackio/restpack-node",
+  "author": "Restpack LLC",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "docs": "typedoc --theme markdown --out docs/ src/"
+  },
+  "devDependencies": {
+    "@types/request": "^2.47.0",
+    "typedoc": "^0.11.1",
+    "typedoc-plugin-markdown": "^1.1.0",
+    "typescript": "^2.8.1"
+  },
+  "dependencies": {
+    "request": "^2.85.0"
+  }
+}
