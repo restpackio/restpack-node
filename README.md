@@ -25,8 +25,8 @@ All API methods return a Promise so you can chain calls or use async / await.
 ```js
 var restpack = require("@restpack/client")
 
-var html2pdf = restpack.html2pdf("<TOUR ACCESS KEY>")
-var screenshot = restpack.screenshot("<TOUR ACCESS KEY>")
+var html2pdf = restpack.html2pdf("<YOUR ACCESS KEY>")
+var screenshot = restpack.screenshot("<YOUR ACCESS KEY>")
 
 html2pdf.convert("http://google.com", { pdf_page: "A4" })
   .then(function success(document) {
@@ -40,10 +40,52 @@ html2pdf.convert("http://google.com", { pdf_page: "A4" })
 
 ## HTML to PDF API
 
-  - [Client Documentation](docs/classes/_html2pdf_index_.html2pdf.md)
-  - [Available Options](docs/interfaces/_screenshot_index_.screenshotcaptureoptions.md)
+[Available Options](docs/interfaces/_html2pdf_index_.pdfconvertoptions.md)
+
+```js
+var restpack = require("@restpack/client")
+
+var html2pdf = restpack.html2pdf("<YOUR ACCESS KEY>")
+
+// Convert given URL to PDF. Return the document details and CDN url of PDF
+// Check Available Options link above for all options.
+var promise = html2pdf.convert("http://google.com", { pdf_page: "A4" /* , other options */ })
+promise.then(function(doc) {
+  console.log(doc);
+})
+
+// Convert given html content to PDF. Return the document details and CDN url of PDF
+html2pdf.convertHTML("<p><b>Bold text</b> etc</p>", { pdf_page: "A4" /* , other options */ })
+
+// Convert given URL to PDF. Return the PDF document as Buffer
+html2pdf.convertToPDF("http://google.com", { pdf_page: "A4" /* , other options */ })
+
+// Convert given html content to PDF. Return the PDF document as Buffer
+html2pdf.convertHTMLToPDF("<p><b>Bold text</b> etc</p>", { pdf_page: "A4" /* , other options */ })
+```
 
 ## Screenshot API
 
-  - [Client Documentation](docs/classes/_screenshot_index_.html2pdf.md)
-  - [Available Options](docs/interfaces/_html2pdf_index_.pdfconvertoptions.md)
+[Available Options](docs/interfaces/_screenshot_index_.screenshotcaptureoptions.md)
+
+```js
+var restpack = require("@restpack/client")
+
+var screenshot = restpack.screenshot("<YOUR ACCESS KEY>")
+
+// Convert given URL to PDF. Return the document details and CDN url of PDF
+// Check Available Options link above for all options.
+var promise = screenshot.capture("http://google.com", { pdf_page: "A4" /* , other options */ })
+promise.then(function(doc) {
+  console.log(doc);
+})
+
+// Convert given html content to PDF. Return the document details and CDN url of PDF
+screenshot.captureHTML("<p><b>Bold text</b> etc</p>", { pdf_page: "A4" /* , other options */ })
+
+// Convert given URL to PDF. Return the PDF document as Buffer
+screenshot.captureToImage("http://google.com", { pdf_page: "A4" /* , other options */ })
+
+// Convert given html content to PDF. Return the PDF document as Buffer
+screenshot.captureHTMLToImage("<p><b>Bold text</b> etc</p>", { pdf_page: "A4" /* , other options */ })
+```
