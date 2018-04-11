@@ -1,6 +1,11 @@
 import HTML2PDF from "./html2pdf"
 import Screenshot from "./screenshot"
 
+export {
+  HTML2PDF,
+  Screenshot
+}
+
 export default {
   /** Create a new HTML to PDF API Client with supplied user access token */
   html2pdf: (accessToken:String) => new HTML2PDF(accessToken),

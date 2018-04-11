@@ -52,7 +52,7 @@ interface CallOptions extends ScreenshotCaptureOptions {
   json: boolean
 }
 
-export default class HTML2PDF extends Client {
+export default class Screenshot extends Client {
   /**
    * Create a new HTML to PDF conversion API client
    * @param accessToken User access token
