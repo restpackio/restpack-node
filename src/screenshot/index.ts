@@ -58,7 +58,7 @@ export default class Screenshot extends Client {
    * @param accessToken User access token
    */
   constructor(accessToken:String) {
-    super("https://restpack.io/api/html2pdf/v3", accessToken);
+    super("https://restpack.io/api/screenshot/v3", accessToken);
   }
 
   /**
@@ -72,7 +72,7 @@ export default class Screenshot extends Client {
     opts.json = true;
     opts.url = url
 
-    return this.request("/convert", { method: "POST", json: opts })
+    return this.request("/capture", { method: "POST", json: opts })
   }
 
   /**
@@ -86,7 +86,7 @@ export default class Screenshot extends Client {
     opts.json = true;
     opts.html = html
 
-    return this.request("/convert", { method: "POST", json: opts })
+    return this.request("/capture", { method: "POST", json: opts })
   }
 
   /**
@@ -99,7 +99,7 @@ export default class Screenshot extends Client {
 
     opts.url = url
 
-    return this.request("/convert", { method: "POST", encoding: null, json: opts })
+    return this.request("/capture", { method: "POST", encoding: null, json: opts })
   }
 
   /**
@@ -112,6 +112,6 @@ export default class Screenshot extends Client {
 
     opts.html = html
 
-    return this.request("/convert", { method: "POST", encoding: null, json: opts })
+    return this.request("/capture", { method: "POST", encoding: null, json: opts })
   }
 }
