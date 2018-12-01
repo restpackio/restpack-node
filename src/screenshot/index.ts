@@ -58,7 +58,7 @@ export default class Screenshot extends Client {
    * @param accessToken User access token
    */
   constructor(accessToken:String) {
-    super("https://restpack.io/api/screenshot/v3", accessToken);
+    super("https://restpack.io/api/screenshot/v5", accessToken);
   }
 
   /**

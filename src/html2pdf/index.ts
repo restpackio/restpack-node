@@ -48,7 +48,7 @@ export default class HTML2PDF extends Client {
    * @param accessToken User access token
    */
   constructor(accessToken:String) {
-    super("https://restpack.io/api/html2pdf/v3", accessToken);
+    super("https://restpack.io/api/html2pdf/v5", accessToken);
   }
 
   /**
