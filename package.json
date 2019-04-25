@@ -1,10 +1,11 @@
 {
   "name": "@restpack/client",
   "version": "1.1.0",
-  "description": "Restpack.IO API Client",
+  "description": "Restpack.io client for HTML to PDF API, and Screenshot API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/restpackio/restpack-node",
+  "homepage": "https://restpack.io",
   "author": "Restpack LLC",
   "license": "MIT",
   "private": false,
@@ -21,5 +22,6 @@
   },
   "dependencies": {
     "request": "^2.85.0"
-  }
+  },
+  "keywords": ["html2pdf", "html", "pdf", "convert", "API", "REST", "svg", "css", "screenshot", "png", "enterprise"]
 }
