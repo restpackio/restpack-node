@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "repository": "https://github.com/restpackio/restpack-node",
   "homepage": "https://restpack.io",
-  "author": "Restpack LLC",
+  "author": "Restpack Inc",
   "license": "MIT",
   "private": false,
   "scripts": {
