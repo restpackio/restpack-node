@@ -1,3 +1,5 @@
+@restpack/client / [Exports](modules.md)
+
 # Restpack Node.JS library
 
 This library provides easy access to https://restpack.io API services from Node.JS
@@ -36,7 +38,6 @@ html2pdf.convert("http://google.com", { pdf_page: "A4" })
     console.error(error)
   })
 ```
-
 
 ## HTML to PDF API
 
